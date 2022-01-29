@@ -1,0 +1,370 @@
+
+/* ---------------------------------------------- */
+/*                  LOAD FONTS                    */
+/* ---------------------------------------------- */
+
+@font-face{
+    font-family: 'Gilroy';
+    src: url(./Gilroy-Regular.woff) format(woff);
+ }
+/* ---------------------------------------------- */
+/*                    GENERAL                     */
+/* ---------------------------------------------- */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy', sans-serif;
+}
+html{
+    font-size: 16px;
+}
+.hide{
+    display: none;
+}
+.fadeIn{
+    animation: fade 0.5s ease-in-out;
+}
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/* ---------------------------------------------- */
+/*                    HEADER                      */
+/* ---------------------------------------------- */
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   
+    width: 100%;
+    max-width: 1400px;
+    height: 60px;
+    margin: 0 auto;
+    background-color: #2F4F4F;
+}
+/* -------- LOGO -------- */
+.logo{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+.logo img{
+    width: 60px;
+}
+.logo div {
+    font-weight: bold;
+    color: black;
+    display: inline-block;
+}
+.logo p {
+    font-weight: bold;
+    color: #111;
+   
+}
+
+
+/* ---------------------------------------------- */
+/*                      MAIN                      */
+/* ---------------------------------------------- */
+main{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* -------- BG IMAGE -------- */
+.stats{
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)) ,url('../img/bg.jpg');
+    background-size: cover;
+}
+/* -------- LATEST REPORT -------- */
+.latest-report{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 50px;
+
+    color: #FFF;
+}
+.latest-report p{
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.country,
+.total-cases,
+.recovered,
+.deaths{
+    height: 100px;
+}
+
+.name{
+    font-size: 2.2em;
+    color: #be64f1;
+    font-weight: bold;
+}
+
+.change-country{
+    cursor: pointer;
+}
+
+.title{
+    font-size: 1.3em;
+}
+.total-cases .value{
+    font-size: 2em;
+    font-weight: bold;
+}
+.recovered .value{
+    font-size: 2em;
+    font-weight: bold;
+    color: #009688;
+}
+.deaths .value{
+    font-size: 2em;
+    font-weight: bold;
+    color: #f44336;
+}
+.new-value{
+    font-size: 1.3em;
+}
+/* -------- CHART -------- */
+.chart{
+    width: 80%;
+    height: 70vh;
+    min-height: 500px;
+
+    margin: 0 auto;
+    padding: 50px 0;
+    
+
+}
+/* -------- SEARCH COUNTRY -------- */
+.search-country{
+    position: relative;
+    top: 10px;
+}
+.search-box{
+    position: absolute;  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+    height: 30px;
+    background-color: #111;
+    z-index: 1;
+
+    
+}
+.search-box input{
+    width: 360px;
+    height: 25px;
+
+    border: none;
+
+    background-color: transparent;
+    color: #FFF;
+
+    padding-left: 15px;
+
+    font-size: 1.1em;
+}
+.search-box img{
+    width: 20px;
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+.country-list{
+    display: flex;
+    position: absolute;
+    top: 30px;
+    width: 400px;
+    height: 300px;
+    background-color: transparent;
+    opacity: 0.9;
+    overflow-y: scroll;
+
+}
+
+.country-list ul{
+    width: 100%;
+}
+
+.country-list ul li{
+    list-style: none;
+    cursor: pointer;
+    padding: 10px;
+    color: #FFF;
+    }
+}
+
+.country-list ul li:hover{
+    border-left: 1px solid #FFF;
+}
+
+/* SCROLL BAR */
+.country-list::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+/* Track */
+  .country-list::-webkit-scrollbar-track {
+    background: #111;
+  }
+  
+/* Handle */
+.country-list::-webkit-scrollbar-thumb {
+    background: #F1F1F1;
+  }
+  
+/* Handle on hover */
+.country-list::-webkit-scrollbar-thumb:hover {
+    background: #FFF;
+  }
+
+.table-title h1{
+     color: #be64f1;
+     text-align: center;
+     padding-left: 30px;
+}
+.table tbody{
+    text-decoration-style: #111 ;
+  }
+.resources-container{
+    display: block;
+    margin-top: 30px;
+    margin-right: 20px;
+    justify-content: space-between;
+    font-size: 1.3em;
+    margin-left: 20px;
+    color: black bold;
+    max-height: 400px;
+    color: #FFF;
+    text-decoration-style: bold ; 
+    font-weight: 600;
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)) ,url('../img/bg.jpg'); 
+    
+}
+.Viruss h4 {
+    color: #8B0000;
+    padding-left: 10px;
+}
+.Viruss h2{
+    color: #009688;
+    padding-left: 10px; 
+}
+.Viruss p,li{
+    color: #FFF;
+    padding-left: 5px;
+}
+.parole {
+    color: #FFF;
+    padding-left: 5px;
+
+}
+.card{
+    justify-content: space-between;
+    background-color: transparent;
+    border: 0.1em;
+    column-gap: 40px;
+    
+}
+.card-header{
+    color: #009688;
+}
+.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration-style: bold;
+    text-decoration-style: bold;
+    background-color: #6a149b;
+
+}
+.video-title h2{
+    color: #009688;
+
+}
+.video{
+    width: 500px;
+    height: 500px;
+}
+
+
+/* ---------------------------------------------- */
+/*                    FOOTER                      */
+/* ---------------------------------------------- */
+footer{
+    max-width: 1400px;
+    height: 100px;
+
+    margin: 0 auto;
+    background-color: #2F4F4F;
+}
+
+.footer-container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.copyright{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.copyright p{
+    color: #FFF;
+}
+.cell-md-6 {
+    text-align: center;
+    display: inline-block;
+}
+.cell-md-6 li{
+    display: inline-block;
+}
+/* ---------------------------------------------- */
+/*             SCREEN WIDTH < 600px               */
+/* ---------------------------------------------- */
+
+ @media screen and (max-width: 600px){
+    .latest-report{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }  
+table, thead, tbody, th, td, tr { 
+        display: block; 
+        font-size: 1em;
+
+    }
+    thead tr { 
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+        color: bold;
+        font-size: 1em;
+
+    }    
+    /* Hide table headers (but not display: none;, for accessibility) */   
+    td:nth-of-type(1):before { content: "Total cases:        ";font-size: 1.8em; }
+    td:nth-of-type(2):before { content: "Total deaths:       ";font-size: 1.8em; }
+    td:nth-of-type(3):before { content: "Total Recovered:        ";font-size: 1.8em; }
+    td:nth-of-type(4):before { content: "New cases:      ";font-size: 1.8em; }
+    td:nth-of-type(5):before { content: "New deaths:         ";font-size: 1.8em;}
+    td:nth-of-type(6):before { content: "New Recovered:      ";font-size: 1.8em; }
+
+}
